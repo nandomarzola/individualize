@@ -1,0 +1,13 @@
+[30-Nov-2018 06:35:02 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/a8brands/public_html/projetos/garagecar/admin/functions/db_connect.inc.php:3
+Stack trace:
+#0 /home/a8brands/public_html/projetos/garagecar/admin/gerar/gerarPaginas.class.php(4): require()
+#1 {main}
+  thrown in /home/a8brands/public_html/projetos/garagecar/admin/functions/db_connect.inc.php on line 3
+[30-Nov-2018 06:37:55 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/a8brands/public_html/projetos/garagecar/admin/gerar/gerarPaginas.class.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/a8brands/public_html/projetos/garagecar/admin/gerar/gerarPaginas.class.php on line 7
+[30-Nov-2018 06:50:25 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on boolean in /home/a8brands/public_html/projetos/garagecar/admin/gerar/gerarPaginas.class.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/a8brands/public_html/projetos/garagecar/admin/gerar/gerarPaginas.class.php on line 7

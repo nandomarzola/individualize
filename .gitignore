@@ -1,0 +1,7 @@
+/vendor
+/admin/configuracoes.inc.php
+/admin/editar/configuracoes.inc.php
+/admin/functions/crud.inc.php
+/class/Functions.class.php
+/includes/configuracoes.inc.php
+/includes/seguranca.php
