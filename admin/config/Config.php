@@ -16,9 +16,9 @@ function urlSotoreGlobal(){
 
 }
 
-define('ROOT', urlSotoreGlobal()."/projetos/individualize/admin");
-define('HOME', urlSotoreGlobal()."/projetos/individualize/admin/home");
-define('LOGIN', urlSotoreGlobal()."/projetos/individualize/admin/login");
+define('ROOT', urlSotoreGlobal()."/novo/admin");
+define('HOME', urlSotoreGlobal()."/novo/home");
+define('LOGIN', urlSotoreGlobal()."/novo/login");
 
 define("SITE", "Admin Endividualize");
 
