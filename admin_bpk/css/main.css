@@ -1,8 +1,0 @@
-.login { background:#000; color:#FFF; width:100%; font-family:Verdana; font-size:17px; }
-.login .form { width:300px; position:absolute; padding:20px; top:50%; margin-top:-130px; left:53%; margin-left:-220px; }
-.login form { width:100%;}
-.login form input{border-radius:4px; padding:15px 10px; width:100%; margin:5px 0; border:none; font-size:14px; outline:none; color:#2F477A; -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -ms-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; }
-.login form input:focus{box-shadow:0px 0px 10px #FFF; -webkit-transition:all 0.3s ease; -moz-transition:all 0.3s ease; -ms-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease; }
-.login form input[type='submit'] { width:320px; padding:10px 10px; border:none; background:#2F477A; cursor:pointer; border-radius:6px; font-size:17px; color:#FFF; }
-.login form input[type='submit']:hover{opacity: 0.8}
-.title{text-align: center; color:#FFF; font-size: 26px; margin-bottom:20px; font-weight: 100; font-family: 'Open Sans';}

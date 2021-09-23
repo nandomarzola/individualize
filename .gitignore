@@ -1,6 +1,7 @@
 /admin/vendor
 /admin/assets/img/uploads
 /admin/.idea/
+/admin_bpk
 /vendor
 /admin_bpk/configuracoes.inc.php
 /admin_bpk/editar/configuracoes.inc.php
