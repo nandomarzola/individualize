@@ -7,5 +7,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="loja" />
+    <orderEntry type="module" module-name="loja" />
+    <orderEntry type="module" module-name="loja" />
+    <orderEntry type="module" module-name="loja" />
+    <orderEntry type="module" module-name="loja" />
+    <orderEntry type="module" module-name="AdminLTE-3.0.0" />
+    <orderEntry type="module" module-name="loja" />
+    <orderEntry type="module" module-name="loja" />
   </component>
 </module>

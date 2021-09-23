@@ -1,0 +1,32 @@
+{
+  "name": "admin/individualize",
+  "description": "admin loja individualize",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nando Marzola",
+      "email": "nandomarzoladev@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "files": [
+      "config/Config.php"
+    ]
+  },
+  "require": {
+    "php": "^7.2",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "dompdf/dompdf": "0.8.*",
+    "coffeecode/router": "1.0.5",
+    "coffeecode/uploader": "1.0.7",
+    "coffeecode/paginator": "1.0.4",
+    "league/plates": "v4.0.0-alpha",
+    "fzaninotto/faker": "1.8.*",
+    "league/csv": "9.3.*"
+  }
+}

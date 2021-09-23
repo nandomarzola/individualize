@@ -31,7 +31,7 @@
     $usuario_cadastro = true;
 	//Valida Email
 
-    if(empty($nome) || empty($empresa) || empty($identificacao) || empty($telefone) || empty($endereco) || empty($email) || empty($senha) || empty($tipo)){
+    if(empty($nome) || empty($empresa) || empty($telefone) || empty($endereco) || empty($email) || empty($senha) || empty($tipo)){
         echo '<script type="text/javascript">alert("Por favor preencha todos os campos"); location.href="'.BASE_SITE.'cadastro"</script>';
     }
 
@@ -77,6 +77,12 @@
         }
     }
 
+    if($tipo == 1 || $tipo == 3){
+        if(empty($identificacao)){
+            echo '<script type="text/javascript">alert("Por favor preencha "); location.href="'.BASE_SITE.'cadastro"</script>';
+        }
+    }
+
 	//validação de medicos
     if(!empty($identificacao) && !empty($uf)){
         $url = "https://www.consultacrm.com.br/api/index.php?tipo=$tipo_identificao&uf=$uf&q=$identificacao&chave=1131329113&destino=json";
@@ -86,8 +92,6 @@
         curl_close($curl);
 
         $arrResp = json_decode($return, true);
-
-        var_dump($arrResp);exit;
 
         if(empty($arrResp['item'])){
             echo '<script type="text/javascript">alert("CRM/CRF inválido."); location.href="'.BASE_SITE.'cadastro"</script>';

@@ -34,12 +34,9 @@ if(!empty($id)){
 				<div class="col-md-12">
 					<input type="text" class="form-control" placeholder="Digite aqui seu nome completo" name="nome">
 				</div>
-				<div class="col-md-6 empresa_col6">
+				<div class="col-md-6 empresa">
 					<input type="text" class="form-control" placeholder="Empresa/Clínica" name="empresa">
 				</div>
-                <div class="col-md-12 empresa_col12" style="display: none">
-                    <input type="text" class="form-control" placeholder="Empresa/Clínica" name="empresa">
-                </div>
 				<div class="col-md-6 identificacao">
 					<input type="text" disabled="disabled" class="form-control troca-tipo" placeholder="Selecione seu perfil abaixo" name="identificacao">
 				</div>
@@ -175,19 +172,12 @@ if(!empty($id)){
         if(valor == '1') {
             $('.troca-tipo').attr("placeholder", "CRM");
             $('.troca-tipo').prop("disabled", false);
-            $('.empresa_col6').fadeIn();
-            $('.identificacao').fadeIn();
-            $('.empresa_col12').fadeOut();
         } else if(valor == '3') {
             $('.troca-tipo').attr("placeholder", "CRF");
             $('.troca-tipo').prop("disabled", false);
-            $('.empresa_col6').fadeIn();
-            $('.identificacao').fadeIn();
-            $('.empresa_col12').fadeOut();
         } else {
-            $('.empresa_col6').fadeOut();
-            $('.identificacao').fadeOut();
-            $('.empresa_col12').fadeIn();
+            $('.troca-tipo').prop("disabled", true);
+            $('.troca-tipo').attr("placeholder", "Selecione o perfil");
         }
 
 	});

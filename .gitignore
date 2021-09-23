@@ -1,7 +1,10 @@
+/admin/vendor
+/admin/assets/img/uploads
+/admin/.idea/
 /vendor
-/admin/configuracoes.inc.php
-/admin/editar/configuracoes.inc.php
-/admin/functions/crud.inc.php
+/admin_bpk/configuracoes.inc.php
+/admin_bpk/editar/configuracoes.inc.php
+/admin_bpk/functions/crud.inc.php
 /class/Functions.class.php
 /includes/configuracoes.inc.php
 /includes/seguranca.php
