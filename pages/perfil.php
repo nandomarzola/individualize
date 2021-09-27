@@ -58,25 +58,25 @@
                                 <div class="btnupload">Faça o upload do logo da sua clínica (não obrigatório)</div>
                                 </div>
                             </div>
-                            <div class="col-md-12" style="margin-top: 10px">
-                                <select class="form-control segmentoMedico" name="segmento" style="display: none">
-                                    <option value="" selected disabled>Selecione sua especialização</option>
-                                    <option value="Dermatologista">Dermatologista</option>
-                                    <option value="Ortopedista">Ortopedista</option>
-                                    <option value="Pediatra">Pediatra</option>
-                                    <option value="Cardiologista">Cardiologista</option>
-                                    <option value="Ginecologista">Ginecologista</option>
-                                    <option value="Oftalmologista">Oftalmologista</option>
-                                    <option value="Ortopedista">Ortopedista</option>
-                                </select>
-                            </div>
-                            <div class="col-md-12" style="margin-top: 10px">
-                                <select class="form-control segmentoOutros" name="segmento">
-                                    <option value="" selected disabled>Selecione sua especialização</option>
-                                    <option value="Nutricionista">Nutricionista</option>
-                                    <option value="Biomédico">Biomédico</option>
-                                </select>
-                            </div>
+<!--                            <div class="col-md-12" style="margin-top: 10px">-->
+<!--                                <select class="form-control segmentoMedico" name="segmento" style="display: none">-->
+<!--                                    <option value="" selected disabled>Selecione sua especialização</option>-->
+<!--                                    <option value="Dermatologista">Dermatologista</option>-->
+<!--                                    <option value="Ortopedista">Ortopedista</option>-->
+<!--                                    <option value="Pediatra">Pediatra</option>-->
+<!--                                    <option value="Cardiologista">Cardiologista</option>-->
+<!--                                    <option value="Ginecologista">Ginecologista</option>-->
+<!--                                    <option value="Oftalmologista">Oftalmologista</option>-->
+<!--                                    <option value="Ortopedista">Ortopedista</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-12" style="margin-top: 10px">-->
+<!--                                <select class="form-control segmentoOutros" name="segmento">-->
+<!--                                    <option value="" selected disabled>Selecione sua especialização</option>-->
+<!--                                    <option value="Nutricionista">Nutricionista</option>-->
+<!--                                    <option value="Biomédico">Biomédico</option>-->
+<!--                                </select>-->
+<!--                            </div>-->
                             <div class="col-md-12 text-center">
                                 <button type="submit" class="btn">ATUALIZAR</button>
                             </div>
