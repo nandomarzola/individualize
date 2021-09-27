@@ -13,3 +13,4 @@
 /admin/app/Models/Model.php
 /admin/config
 /admin/app/Helpers
+/admin/app/Controllers/ValidadeLogin.php
