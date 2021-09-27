@@ -10,3 +10,4 @@
 /includes/configuracoes.inc.php
 /includes/seguranca.php
 .htaccess
+/admin/config

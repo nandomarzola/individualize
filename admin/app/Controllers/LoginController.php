@@ -34,7 +34,7 @@ class LoginController extends ValidadeLogin
     {
         $login = $this->model->getLogin($request);
 
-        if($login){
+        if(isset($login->id)){
             $_SESSION['user'] = [
                 'id' => $login->id,
                 'name' => $login->nome,
@@ -44,6 +44,9 @@ class LoginController extends ValidadeLogin
 
             flashMessages("success", "Logado com sucesso");
             redirect(url('home'));
+        }else{
+            flashMessages("error", "Usuário ou senha inválido");
+            redirect(url(''));
         }
 
     }
@@ -51,7 +54,7 @@ class LoginController extends ValidadeLogin
     public function logout()
     {
         session_destroy();
-        redirect(url('/'));
+        redirect(url(''));
 
     }
 
