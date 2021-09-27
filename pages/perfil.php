@@ -42,7 +42,7 @@
                                 <input type="password" class="form-control" placeholder="Senha" name="senha" value="<?= $medico['senha']?>">
                             </div>
                             <div class="col-md-4">
-                                <select id="select" class="form-control" name="tipo">
+                                <select id="select" class="form-control" name="tipo" disabled>
                                     <option value="0" selected disabled>Selecione seu perfil</option>
                                     <option value="1" <?= $medico['tipo'] == 1 ? 'selected' : ''?>>Médico</option>
                                     <option value="2" <?= $medico['tipo'] == 2 ? 'selected' : ''?>>Farmacêutico</option>
@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12" style="margin-top: 10px">
-                                <select class="form-control segmentoMedico" name="segmento" style="display: none" disabled>
+                                <select class="form-control segmentoMedico" name="segmento" style="display: none">
                                     <option value="" selected disabled>Selecione sua especialização</option>
                                     <option value="Dermatologista">Dermatologista</option>
                                     <option value="Ortopedista">Ortopedista</option>
@@ -71,7 +71,7 @@
                                 </select>
                             </div>
                             <div class="col-md-12" style="margin-top: 10px">
-                                <select class="form-control segmentoOutros" name="segmento" disabled>
+                                <select class="form-control segmentoOutros" name="segmento">
                                     <option value="" selected disabled>Selecione sua especialização</option>
                                     <option value="Nutricionista">Nutricionista</option>
                                     <option value="Biomédico">Biomédico</option>
@@ -94,32 +94,32 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 
 
-<script type="text/javascript">
-    setInterval(function(){
-        var filename = $('.anexa').val().replace(/C:\\fakepath\\/i, '');
-        if(filename != ''){
-            $(".btnupload").text(filename);
-        }
-    }, 500);
-
-
-    $('#select').on('change', function() {
-        var valor = this.value;
-
-        if(valor == '1'){
-            $('.segmentoMedico').fadeIn();
-        }else{
-            $('.segmentoMedico').val('');
-            $('.segmentoMedico').fadeOut();
-        }
-
-        if(valor == '3'){
-            $('.segmentoOutros').fadeIn();
-        }else{
-            $('.segmentoOutros').val('');
-            $('.segmentoOutros').fadeOut();
-        }
-
-    });
-
-</script>
+<!--<script type="text/javascript">-->
+<!--    setInterval(function(){-->
+<!--        var filename = $('.anexa').val().replace(/C:\\fakepath\\/i, '');-->
+<!--        if(filename != ''){-->
+<!--            $(".btnupload").text(filename);-->
+<!--        }-->
+<!--    }, 500);-->
+<!---->
+<!---->
+<!--    $('#select').on('change', function() {-->
+<!--        var valor = this.value;-->
+<!---->
+<!--        if(valor == '1'){-->
+<!--            $('.segmentoMedico').fadeIn();-->
+<!--        }else{-->
+<!--            $('.segmentoMedico').val('');-->
+<!--            $('.segmentoMedico').fadeOut();-->
+<!--        }-->
+<!---->
+<!--        if(valor == '3'){-->
+<!--            $('.segmentoOutros').fadeIn();-->
+<!--        }else{-->
+<!--            $('.segmentoOutros').val('');-->
+<!--            $('.segmentoOutros').fadeOut();-->
+<!--        }-->
+<!---->
+<!--    });-->
+<!---->
+<!--</script>-->
