@@ -30,6 +30,8 @@ $fileName = basename($_FILES["logo"]["name"]);
 
 $targetFilePath = $targetDir . $fileName;
 
+dd($targetFilePath);
+
 if (!empty($_FILES["logo"]["name"])) {
 
     $teste = move_uploaded_file($_FILES["logo"]["tmp_name"], $targetFilePath);

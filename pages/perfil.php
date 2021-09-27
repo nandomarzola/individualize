@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12" style="margin-top: 10px">
-                                <select class="form-control segmentoMedico" name="segmento" style="display: none">
+                                <select class="form-control segmentoMedico" name="segmento" style="display: none" disabled>
                                     <option value="" selected disabled>Selecione sua especialização</option>
                                     <option value="Dermatologista">Dermatologista</option>
                                     <option value="Ortopedista">Ortopedista</option>
@@ -71,7 +71,7 @@
                                 </select>
                             </div>
                             <div class="col-md-12" style="margin-top: 10px">
-                                <select class="form-control segmentoOutros" name="segmento" style="display: none">
+                                <select class="form-control segmentoOutros" name="segmento" disabled>
                                     <option value="" selected disabled>Selecione sua especialização</option>
                                     <option value="Nutricionista">Nutricionista</option>
                                     <option value="Biomédico">Biomédico</option>
