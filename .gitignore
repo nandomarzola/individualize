@@ -3,9 +3,6 @@
 /admin/.idea/
 /admin_bpk
 /vendor
-/admin_bpk/configuracoes.inc.php
-/admin_bpk/editar/configuracoes.inc.php
-/admin_bpk/functions/crud.inc.php
 /class/Functions.class.php
 /includes/configuracoes.inc.php
 /includes/seguranca.php
@@ -13,5 +10,3 @@
 /admin/config
 /admin/app/Helpers
 /admin/app/Controllers/ValidadeLogin.php
-
-
