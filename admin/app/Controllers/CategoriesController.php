@@ -87,6 +87,23 @@ class CategoriesController extends ValidateLoginController
         ]);
     }
 
+    public function delete(array $data){
+
+        $delete_categorie = '';
+
+        if(!empty($data['id'])){
+            $delete_categorie = $this->model->destroy($data['id']);
+        }
+
+        if(!empty($delete_categorie)){
+            flashMessages("success", "categoria  deletada com sucesso");
+            redirect(url('categories'));
+        }else{
+            flashMessages("error", 'Ocorreu um problema ao deletar a categoria , favor contactar o suporte');
+            redirect(url('categories'));
+        }
+    }
+
     public function update(array $request)
     {
         $update_categorie = '';

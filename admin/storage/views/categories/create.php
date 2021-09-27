@@ -5,8 +5,7 @@
 <div class="content-wrapper">
     <div class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">    <div class="container-fluid" style="background: #fff; padding:20px; border-radius: 10px; width: 98%">
-
+            <div class="row mb-2">
                 <div class="col-sm-9">
                     <h1 class="m-0 text-dark" style="line-height: 70px;">NOVA CATEGORIA</h1>
                 </div>

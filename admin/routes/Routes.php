@@ -30,6 +30,7 @@ $route->get("/categories/create", "CategoriesController:create");
 $route->post("/categories/save", "CategoriesController:save");
 $route->get("/categories/{id}/edit", "CategoriesController:edit");
 $route->post("/categories/update/{id}", "CategoriesController:update");
+$route->get("/categories/{id}/delete", "CategoriesController:delete");
 
 $route->get("/sub-categories", "SubCategoriesController:index");
 $route->get("/sub-categories/create", "SubCategoriesController:create");

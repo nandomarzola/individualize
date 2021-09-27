@@ -76,4 +76,15 @@ class Categories extends Model
 
     }
 
+    public function destroy(int $id){
+
+        $query = "delete from $this->db where id = :id";
+
+        $prepare = $this->prepare($query);
+        $prepare->bindValue(':id', $id);
+
+        return $prepare->execute();
+
+    }
+
 }

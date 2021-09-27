@@ -64,10 +64,10 @@
     <div class="wrapper">
         <?php
             ## Páginas ##
-            if(isset($get[0])){
+            if(!isset($get[0])){
                 switch($get[0]):
                     default:
-                        $arquivo = "pages/".$get[0].".php";
+                        $arquivo = "pages/cadastro.php";
                         if(file_exists($arquivo)):
                             include $arquivo;
                         else:

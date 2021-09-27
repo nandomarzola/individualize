@@ -10,7 +10,7 @@
                     <h1 class="m-0 text-dark" style="line-height: 70px;">EDITAR CATEGORIA</h1>
                 </div>
                 <div class="col-sm-3">
-                    <a href="<?= url('categoriescategories')?>" class="btn btn-info float-right"  style="border-radius: 100%; padding:10px; height: 50px; width: 50px; font-size:18px">
+                    <a href="<?= url('categories')?>" class="btn btn-info float-right"  style="border-radius: 100%; padding:10px; height: 50px; width: 50px; font-size:18px">
                         <i class="fas fa-fast-backward"></i>
                     </a>
                 </div>
