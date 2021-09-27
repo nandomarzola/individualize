@@ -33,7 +33,6 @@
                         <tr>
                             <th>Descrição</th>
                             <th style="text-align: center">Editar</th>
-                            <th style="text-align: center">Deletar</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -42,9 +41,6 @@
                                 <td><?= $d['nome']?></td>
                                 <td style="text-align: center;">
                                     <a href="<?= url('categories/'.$d['id'].'/edit')?>" class="btn btn-info btn-sm" title="Editar" style="width: 40px;"><i class="fa fa-edit"></i></a>
-                                </td>
-                                <td style="text-align: center;">
-                                    <a href="<?= url('categories/'.$d['id'].'/delete')?>" class="btn btn-danger btn-sm" title="Deletar" style="width: 40px;"><i class="fa fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach;?>
