@@ -2,12 +2,12 @@
 namespace App\Controllers;
 
 
-use App\Controllers\ValidadeLogin;
+use App\Controllers\ValidateLoginController;
 use App\Models\Users;
 use League\Plates\Engine;
 use CoffeeCode\Paginator\Paginator;
 
-class UsersController extends ValidadeLogin
+class UsersController extends ValidateLoginController
 {
     private $view;
     private $model;

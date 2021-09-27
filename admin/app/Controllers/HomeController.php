@@ -2,10 +2,10 @@
 namespace App\Controllers;
 
 
-use App\Controllers\ValidadeLogin;
+use App\Controllers\ValidateLoginController;
 use League\Plates\Engine;
 
-class HomeController extends ValidadeLogin
+class HomeController extends ValidateLoginController
 {
     private $view;
 

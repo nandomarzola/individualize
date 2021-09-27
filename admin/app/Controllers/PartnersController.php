@@ -2,13 +2,13 @@
 namespace App\Controllers;
 
 
-use App\Controllers\ValidadeLogin;
+use App\Controllers\ValidateLoginController;
 use App\Models\Partners;
 use League\Plates\Engine;
 use CoffeeCode\Paginator\Paginator;
 use CoffeeCode\Uploader\Image;
 
-class PartnersController extends ValidadeLogin
+class PartnersController extends ValidateLoginController
 {
     private $view;
     private $model;

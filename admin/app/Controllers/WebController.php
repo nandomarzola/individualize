@@ -4,7 +4,7 @@ namespace App\Controllers;
 use League\Plates\Engine;
 use CoffeeCode\Paginator\Paginator;
 
-class WebController extends ValidadeLogin
+class WebController extends ValidateLoginController
 {
     private $view;
     private $view_error;

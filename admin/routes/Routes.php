@@ -19,9 +19,9 @@ $route->get("/order/{id}", "Admin\OrdersController:order");
 $route->post("/order/invoice", "Admin\OrdersController:invoiceOrder");
 $route->post("/order/cancel", "Admin\OrdersController:cancelOrder");**/
 
-$route->get("/", "LoginController:index");
-$route->post("/login", "LoginController:login");
-$route->get("/logout", "LoginController:logout");
+$route->get("/", "LoginControllerController:index");
+$route->post("/login", "LoginControllerController:login");
+$route->get("/logout", "LoginControllerController:logout");
 
 $route->get("/home", "HomeController:index");
 

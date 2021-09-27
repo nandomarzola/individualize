@@ -2,7 +2,7 @@
 namespace App\Controllers;
 
 
-use App\Controllers\ValidadeLogin;
+use App\Controllers\ValidateLoginController;
 use App\Models\Categories;
 use App\Models\Doctors;
 use App\Models\Glossary;
@@ -10,7 +10,7 @@ use League\Plates\Engine;
 use CoffeeCode\Paginator\Paginator;
 use League\Csv\Writer;
 
-class DoctorsSegmentController extends ValidadeLogin
+class DoctorsSegmentController extends ValidateLoginController
 {
     private $view;
     private $model;

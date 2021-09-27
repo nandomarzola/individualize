@@ -2,13 +2,13 @@
 namespace App\Controllers;
 
 
-use App\Controllers\ValidadeLogin;
+use App\Controllers\ValidateLoginController;
 use App\Models\Institutional;
 use Decimal\Decimal;
 use League\Plates\Engine;
 use CoffeeCode\Paginator\Paginator;
 
-class InstitutionalController extends ValidadeLogin
+class InstitutionalController extends ValidateLoginController
 {
     private $view;
     private $model;

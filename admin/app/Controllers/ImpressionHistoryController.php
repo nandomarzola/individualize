@@ -2,14 +2,14 @@
 namespace App\Controllers;
 
 
-use App\Controllers\ValidadeLogin;
+use App\Controllers\ValidateLoginController;
 use App\Models\Doctors;
 use App\Models\Formula;
 use App\Models\ImpressionHistory;
 use League\Plates\Engine;
 use CoffeeCode\Paginator\Paginator;
 
-class ImpressionHistoryController extends ValidadeLogin
+class ImpressionHistoryController extends ValidateLoginController
 {
     private $view;
     private $model;

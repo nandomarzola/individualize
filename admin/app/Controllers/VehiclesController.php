@@ -2,7 +2,7 @@
 namespace App\Controllers;
 
 
-use App\Controllers\ValidadeLogin;
+use App\Controllers\ValidateLoginController;
 use App\Models\Categories;
 use App\Models\Formula;
 use App\Models\Glossary;
@@ -11,7 +11,7 @@ use App\Models\Vehicles;
 use League\Plates\Engine;
 use CoffeeCode\Paginator\Paginator;
 
-class VehiclesController extends ValidadeLogin
+class VehiclesController extends ValidateLoginController
 {
     private $view;
     private $model;

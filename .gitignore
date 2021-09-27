@@ -10,4 +10,4 @@
 /admin/config
 /admin/app/Helpers
 /admin/config/Config.php
-/admin/app/Controllers/ValidadeLogin.php
+/admin/app/Controllers/ValidateLoginController.php
