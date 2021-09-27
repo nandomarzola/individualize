@@ -37,12 +37,12 @@ if(!empty($usuario)){
     try {
         $mail->isSMTP();
         $mail->SMTPAuth = true;
-        $mail->Username = 'nandomarzola1@gmail.com';
-        $mail->Password = 'idenandopl1234';
-        $mail->SMTPSecure = 'tls';
-        $mail->Host = 'smtp.gmail.com';
-        $mail->Port = 587;
-        $mail->setFrom('nandomarzola1@gmail.com', 'Nando Marzola');
+        $mail->Username = 'suporte@individualizeja.com.br';
+        $mail->Password = 'Ausc<R$2';
+        $mail->SMTPSecure = 'ssl';
+        $mail->Host = 'mail.individualizeja.com.br';
+        $mail->Port = 465;
+        $mail->setFrom('suporte@individualizeja.com.br', 'Nova senha');
         $mail->addAddress($email, $nome);
         $mail->isHTML(true);
         $mail->Subject = 'Nova senha Individualize';
@@ -52,7 +52,8 @@ if(!empty($usuario)){
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";exit;
     }
-
+    
+    $nova_senha = crypt($nova_senha);
     $update = $db->query("UPDATE i9_medicos SET senha = '$nova_senha' WHERE id = $id");
 
     if ($update) {
