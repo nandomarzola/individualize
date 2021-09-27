@@ -33,7 +33,7 @@ function convertDate($date, string $format = "d/m/Y H:i:s")
 
 function flashMessages($type, $message)
 {
-    session_start();
+    
     $_SESSION['type'] = $type;
     $_SESSION['message'] = $message;
 

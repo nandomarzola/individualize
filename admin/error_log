@@ -1,0 +1,35 @@
+[27-Sep-2021 02:37:49 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home1/indivi14/public_html/novo/individualize/admin/app/Models/Model.php:15
+Stack trace:
+#0 /home1/indivi14/public_html/novo/individualize/admin/app/Models/Model.php(15): PDO->__construct('mysql:host=loca...', 'root', 'root')
+#1 /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/LoginController.php(17): App\Models\Model->__construct()
+#2 /home1/indivi14/public_html/novo/individualize/admin/vendor/coffeecode/router/src/Dispatch.php(157): App\Controllers\LoginController->__construct()
+#3 /home1/indivi14/public_html/novo/individualize/admin/vendor/coffeecode/router/src/Dispatch.php(139): CoffeeCode\Router\Dispatch->route()
+#4 /home1/indivi14/public_html/novo/individualize/admin/routes/Routes.php(106): CoffeeCode\Router\Dispatch->dispatch()
+#5 /home1/indivi14/public_html/novo/individualize/admin/index.php(10): require_once('/home1/indivi14...')
+#6 {main}
+  thrown in /home1/indivi14/public_html/novo/individualize/admin/app/Models/Model.php on line 15
+[27-Sep-2021 02:43:49 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /home1/indivi14/public_html/novo/individualize/admin/app/Models/Model.php:15
+Stack trace:
+#0 /home1/indivi14/public_html/novo/individualize/admin/app/Models/Model.php(15): PDO->__construct('mysql:host=loca...', 'root', 'root')
+#1 /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/LoginController.php(17): App\Models\Model->__construct()
+#2 /home1/indivi14/public_html/novo/individualize/admin/vendor/coffeecode/router/src/Dispatch.php(157): App\Controllers\LoginController->__construct()
+#3 /home1/indivi14/public_html/novo/individualize/admin/vendor/coffeecode/router/src/Dispatch.php(139): CoffeeCode\Router\Dispatch->route()
+#4 /home1/indivi14/public_html/novo/individualize/admin/routes/Routes.php(106): CoffeeCode\Router\Dispatch->dispatch()
+#5 /home1/indivi14/public_html/novo/individualize/admin/index.php(10): require_once('/home1/indivi14...')
+#6 {main}
+  thrown in /home1/indivi14/public_html/novo/individualize/admin/app/Models/Model.php on line 15
+[27-Sep-2021 02:44:40 America/Fortaleza] PHP Notice:  session_start(): A session had already been started - ignoring in /home1/indivi14/public_html/novo/individualize/admin/app/Helpers/Helpers.php on line 36
+[27-Sep-2021 02:44:40 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/indivi14/public_html/novo/individualize/admin/app/Helpers/Helpers.php:36) in /home1/indivi14/public_html/novo/individualize/admin/app/Helpers/Helpers.php on line 13
+[27-Sep-2021 02:47:16 America/Fortaleza] PHP Notice:  Undefined index: segment in /home1/indivi14/public_html/novo/individualize/admin/storage/views/components/nav.php on line 13
+[27-Sep-2021 02:47:29 America/Fortaleza] PHP Notice:  Undefined index: user in /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/ValidadeLogin.php on line 8
+[27-Sep-2021 02:47:29 America/Fortaleza] PHP Notice:  Trying to access array offset on value of type null in /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/ValidadeLogin.php on line 8
+[27-Sep-2021 02:47:29 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/ValidadeLogin.php:8) in /home1/indivi14/public_html/novo/individualize/admin/app/Helpers/Helpers.php on line 13
+[27-Sep-2021 02:47:29 America/Fortaleza] PHP Notice:  Undefined index: segment in /home1/indivi14/public_html/novo/individualize/admin/storage/views/components/nav.php on line 13
+[27-Sep-2021 02:47:29 America/Fortaleza] PHP Notice:  Undefined index: user in /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/ValidadeLogin.php on line 8
+[27-Sep-2021 02:47:29 America/Fortaleza] PHP Notice:  Trying to access array offset on value of type null in /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/ValidadeLogin.php on line 8
+[27-Sep-2021 02:47:29 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/ValidadeLogin.php:8) in /home1/indivi14/public_html/novo/individualize/admin/app/Helpers/Helpers.php on line 13
+[27-Sep-2021 02:47:29 America/Fortaleza] PHP Notice:  Undefined index: segment in /home1/indivi14/public_html/novo/individualize/admin/storage/views/components/nav.php on line 13
+[27-Sep-2021 02:48:52 America/Fortaleza] PHP Notice:  Undefined index: user in /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/ValidadeLogin.php on line 8
+[27-Sep-2021 02:48:52 America/Fortaleza] PHP Notice:  Trying to access array offset on value of type null in /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/ValidadeLogin.php on line 8
+[27-Sep-2021 02:48:52 America/Fortaleza] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/indivi14/public_html/novo/individualize/admin/app/Controllers/ValidadeLogin.php:8) in /home1/indivi14/public_html/novo/individualize/admin/app/Helpers/Helpers.php on line 13
+[27-Sep-2021 02:48:52 America/Fortaleza] PHP Notice:  Undefined index: segment in /home1/indivi14/public_html/novo/individualize/admin/storage/views/components/nav.php on line 13

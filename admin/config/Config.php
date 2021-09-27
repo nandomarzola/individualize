@@ -3,22 +3,16 @@
 
 function urlSotoreGlobal(){
 
-    if(strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') === false)
-    {
-        $protocolo = 'http://';
-    }
-    else
-    {
-        $protocolo = 'https://';
-    }
-
+   
+    $protocolo = 'https://';
+    
     return $protocolo.$_SERVER['HTTP_HOST'];
 
 }
 
-define('ROOT', urlSotoreGlobal()."/projetos/individualize/admin");
-define('HOME', urlSotoreGlobal()."/projetos/individualize/home");
-define('LOGIN', urlSotoreGlobal()."/projetos/individualize/login");
+define('ROOT', urlSotoreGlobal()."/novo/individualize/admin");
+define('HOME', urlSotoreGlobal()."/novo/individualize/home");
+define('LOGIN', urlSotoreGlobal()."/novo/individualize/login");
 
 define("SITE", "Admin Endividualize");
 
