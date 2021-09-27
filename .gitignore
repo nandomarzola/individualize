@@ -9,9 +9,9 @@
 /class/Functions.class.php
 /includes/configuracoes.inc.php
 /includes/seguranca.php
-.htaccess
 /admin/app/Models/Model.php
 /admin/config
 /admin/app/Helpers
 /admin/app/Controllers/ValidadeLogin.php
+
 
