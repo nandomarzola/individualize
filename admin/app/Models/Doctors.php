@@ -85,27 +85,85 @@ class Doctors extends Model
     }
 
     public function save(array $data){
+       // dd($data);
+        $prepare = $this->prepare(
+            "INSERT INTO $this->db 
+                (
+                nome, 
+                empresa,
+                identificacao,
+                telefone,
+                endereco,
+                email,
+                senha,
+                logo,
+                status,
+                tipo,
+                segmento,
+                tipo_identificacao        
+                ) 
+                VALUES 
+                (
+                :nome, 
+                :empresa,
+                :identificacao,
+                :telefone,
+                :endereco,
+                :email,
+                :senha,
+                :logo,
+                :status,
+                :tipo,
+                :segmento,
+                :tipo_identificacao
+                )
+                ");
 
-        $prepare = $this->prepare("INSERT INTO $this->db (nome, descricao) VALUES (:nome, :descricao)");
-
-        $prepare->bindValue(':nome',$data['name']);
-        $prepare->bindValue(':descricao', $data['description']);
+        $prepare->bindValue(':nome',$data['nome']);
+        $prepare->bindValue(':empresa',$data['empresa']);
+        $prepare->bindValue(':identificacao',$data['identificacao'] ?? '');
+        $prepare->bindValue(':telefone',$data['telefone']);
+        $prepare->bindValue(':endereco',$data['endereco']);
+        $prepare->bindValue(':email',$data['email']);
+        $prepare->bindValue(':senha',$data['senha']);
+        $prepare->bindValue(':logo',$data['logo']);
+        $prepare->bindValue(':status',$data['status']);
+        $prepare->bindValue(':tipo',$data['tipo']);
+        $prepare->bindValue(':segmento',$data['segmento'] ?? '');
+        $prepare->bindValue(':tipo_identificacao',$data['tipo_identificacao']);
 
         return $prepare->execute();
 
     }
 
     public function update(array $data){
+                $prepare = $this->prepare("UPDATE $this->db SET 
+                    nome = :nome,
+                    empresa = :empresa, 
+                    identificacao = :identificacao, 
+                    telefone = :telefone, 
+                    endereco = :endereco,
+                    email = :email, 
+                    logo = :logo, 
+                    status = :status, 
+                    tipo = :tipo, 
+                    segmento = :segmento, 
+                    tipo_identificacao = :tipo_identificacao 
+                    WHERE 
+                    id = :id
+                ");
 
-        $prepare = $this->prepare("UPDATE $this->db SET 
-            id_medico = :id_medico,
-            id_formula = :id_formula 
-            WHERE 
-            id = :id
-            ");
-
-        $prepare->bindValue(':id_medico', $data['id_medico']);
-        $prepare->bindValue(':id_formula', $data['id_formula']);
+        $prepare->bindValue(':nome',$data['nome']);
+        $prepare->bindValue(':empresa',$data['empresa']);
+        $prepare->bindValue(':identificacao',$data['identificacao'] ?? '');
+        $prepare->bindValue(':telefone',$data['telefone']);
+        $prepare->bindValue(':endereco',$data['endereco']);
+        $prepare->bindValue(':email',$data['email']);
+        $prepare->bindValue(':logo',$data['logo']);
+        $prepare->bindValue(':status',$data['status']);
+        $prepare->bindValue(':tipo',$data['tipo']);
+        $prepare->bindValue(':segmento',$data['segmento'] ?? '');
+        $prepare->bindValue(':tipo_identificacao',$data['tipo_identificacao']);
         $prepare->bindValue(':id', $data['id']);
 
         return $prepare->execute();

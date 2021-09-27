@@ -10,17 +10,15 @@
                     <h1 class="m-0 text-dark" style="line-height: 50px;">MÉDICOS</h1>
                 </div>
                 <div class="col-sm-3">
+                    <a href="<?= url('doctors/create') ?>" title="Novo Médico" class="btn btn-info float-right" style="border-radius: 100%; height: 50px; width: 50px; font-size:22px">
+                        <i class="fa fa-image"></i>
+                    </a>
                     <?php if(!empty($data)): ?>
-                        <a href="<?= url('doctors/export')?>" title="Exportar Médicos" class="btn btn-success float-right"  style="border-radius: 100%; padding:10px; height: 50px; width: 50px; font-size:18px">
+                        <a href="<?= url('doctors/export')?>" title="Exportar Médicos" class="btn btn-success float-right"  style="margin-right:10px; border-radius: 100%; padding:10px; height: 50px; width: 50px; font-size:18px">
                             <i class="fas fa-file-excel"></i>
                         </a>
                     <?php endif; ?>
                 </div>
-                <!--<div class="col-sm-3">
-                    <a href="<?= url('doctors/create') ?>" title="Novo Médico" class="btn btn-info float-right" style="border-radius: 100%; height: 50px; width: 50px; font-size:22px">
-                        <i class="fa fa-image"></i>
-                    </a>
-                </div>-->
             </div>
         </div>
     </div>
@@ -42,7 +40,7 @@
                             <th>Nome</th>
                             <th>Empresa</th>
                             <th>E-mail</th>
-                            <!--<th style="text-align: center">Editar</th>-->
+                            <th style="text-align: center">Editar</th>
                             <th style="text-align: center">Deletar</th>
                         </tr>
                         </thead>
@@ -53,9 +51,9 @@
                                 <td><?= $d['nome']?></td>
                                 <td><?= $d['empresa']?></td>
                                 <td><?= $d['email']?></td>
-                                <!--<td style="text-align: center;">
-                                    <a href="<?= url('glossary/'.$d['id'].'/edit')?>" class="btn btn-info btn-sm" title="Editar" style="width: 40px;"><i class="fa fa-edit"></i></a>
-                                </td>-->
+                                <td style="text-align: center;">
+                                    <a href="<?= url('doctors/'.$d['id'].'/edit')?>" class="btn btn-info btn-sm" title="Editar" style="width: 40px;"><i class="fa fa-edit"></i></a>
+                                </td>
                                 <td style="text-align: center;">
                                     <a href="<?= url('doctors/'.$d['id'].'/delete')?>" class="btn btn-danger btn-sm" title="Deletar" style="width: 40px;"><i class="fa fa-trash-alt"></i></a>
                                 </td>

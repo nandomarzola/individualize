@@ -32,7 +32,7 @@ class SubCategoriesController extends ValidateLoginController
 
         if(isset($_GET['search']) & !empty($_GET['search'])){
             $descricao = trim($_GET['search']);
-            $search = "nome LIKE '%$descricao%'";
+            $search = "sub_cat.nome LIKE '%$descricao%'";
             $this->paginator = new Paginator("?search=".$_GET['search']."&page=");
         }
 

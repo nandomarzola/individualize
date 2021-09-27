@@ -107,10 +107,10 @@ class FormulaController extends ValidateLoginController
         }
 
         if(!empty($new_formula)){
-            flashMessages("success", "Fórmula cadastrado com sucesso");
+            flashMessages("success", "Formula cadastrado com sucesso");
             redirect(url('formula'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao cadastrar a Fórmula, favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao cadastrar a Formula, favor contactar o suporte');
             redirect(url('formula'));
         }
 
@@ -144,10 +144,10 @@ class FormulaController extends ValidateLoginController
         }
 
         if(!empty($delete_formula)){
-            flashMessages("success", "Fórmula deletado com sucesso");
+            flashMessages("success", "Formula deletado com sucesso");
             redirect(url('formula'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao deletar a Fórmula , favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao deletar a Formula , favor contactar o suporte');
             redirect(url('formula'));
         }
     }
@@ -171,10 +171,10 @@ class FormulaController extends ValidateLoginController
         }
 
         if(!empty($update_formula)){
-            flashMessages("success", "Fórmula editada com sucesso");
+            flashMessages("success", "Formula editada com sucesso");
             redirect(url('formula'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao editar a Fórmula , favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao editar a Formula , favor contactar o suporte');
             redirect(url('formula'));
         }
 

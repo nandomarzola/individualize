@@ -28,7 +28,7 @@
                         <tr>
                             <th>Id</th>
                             <th>Descrição Rápida</th>
-                            <th style="text-align: center">Editar</th>
+                            <!--<th style="text-align: center">Editar</th>-->
                         </tr>
                         </thead>
                         <tbody>
@@ -36,9 +36,9 @@
                             <tr>
                                 <td><?= $d['id']?></td>
                                 <td><?= $d['descricao_rapida']?></td>
-                                <td style="text-align: center;">
+                                <!--<td style="text-align: center;">
                                     <a href="<?= url('glossary/'.$d['id'].'/edit')?>" class="btn btn-info btn-sm" title="Editar" style="width: 40px;"><i class="fa fa-edit"></i></a>
-                                </td>
+                                </td>-->
                             </tr>
                         <?php endforeach;?>
                         </tbody>

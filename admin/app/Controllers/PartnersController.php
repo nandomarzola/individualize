@@ -45,7 +45,7 @@ class PartnersController extends ValidateLoginController
         );
 
         echo $this->view->render('index', [
-            'title' => 'Glossário | '. SITE,
+            'title' => 'Parceiros | '. SITE,
             'data' => $data,
             'paginator' => $this->paginator,
             'total_register' => $total_register

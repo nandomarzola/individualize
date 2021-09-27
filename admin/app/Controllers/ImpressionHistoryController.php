@@ -40,6 +40,7 @@ class ImpressionHistoryController extends ValidateLoginController
         $page = filter_input(INPUT_GET, "page", FILTER_SANITIZE_STRIPPED);
         $total_register = $this->model->countRegisters($search);
 
+
         $this->paginator->pager($total_register[0]['count'], 10, $page, "2");
 
         $data = $this->model->find(
@@ -79,10 +80,10 @@ class ImpressionHistoryController extends ValidateLoginController
         }
 
         if(!empty($update_impression)){
-            flashMessages("success", "Histórico de Impressões  editado com sucesso");
+            flashMessages("success", " Historico de Impressoes  editado com sucesso");
             redirect(url('impression-history'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao editar o Histórico de Impressões , favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao editar o Historico de Impressoes , favor contactar o suporte');
             redirect(url('impression-history'));
         }
 

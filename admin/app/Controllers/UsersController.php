@@ -70,10 +70,10 @@ class UsersController extends ValidateLoginController
         }
 
         if(!empty($new_user)){
-            flashMessages("success", "usuário cadastrado com sucesso");
+            flashMessages("success", "usuario cadastrado com sucesso");
             redirect(url('users'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao cadastrar o usuário, favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao cadastrar o usuario, favor contactar o suporte');
             redirect(url('users'));
         }
 
@@ -104,10 +104,10 @@ class UsersController extends ValidateLoginController
         }
 
         if(!empty($update_user)){
-            flashMessages("success", "usuário  editado com sucesso");
+            flashMessages("success", "usuario  editado com sucesso");
             redirect(url('users'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao editar o usuário , favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao editar o usuario , favor contactar o suporte');
             redirect(url('users'));
         }
 

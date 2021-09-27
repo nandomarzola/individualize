@@ -43,7 +43,7 @@ class SubCategories extends Model
             $search = ' where '.$search;
         }
 
-        $query = "select count(*) as count from $this->db  $search";
+        $query = "select count(*) as count from $this->db as sub_cat  $search";
 
         return $this->query($query)->fetchAll();
 

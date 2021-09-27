@@ -29,7 +29,7 @@ class InstitutionalController extends ValidateLoginController
 
         if(isset($_GET['search']) & !empty($_GET['search'])){
             $descricao = trim($_GET['search']);
-            $search = "nome LIKE '%$descricao%'";
+            $search = "descricao_rapida LIKE '%$descricao%'";
             $this->paginator = new Paginator("?search=".$_GET['search']."&page=");
         }
 

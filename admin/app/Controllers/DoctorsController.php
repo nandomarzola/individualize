@@ -6,6 +6,7 @@ use App\Controllers\ValidateLoginController;
 use App\Models\Categories;
 use App\Models\Doctors;
 use App\Models\Glossary;
+use CoffeeCode\Uploader\Image;
 use League\Csv\Writer;
 use League\Plates\Engine;
 use CoffeeCode\Paginator\Paginator;
@@ -64,15 +65,42 @@ class DoctorsController extends ValidateLoginController
     {
         $new_doctor = '';
 
-        if(!empty($request['description']) && isset($request['name'])){
+        $files = $_FILES;
+        $uploaded = '';
+        $upload = new Image("../assets/img", 'uploads');
+
+        if(!empty($files['imagem']['name'])){
+            $file = $files['imagem'];
+
+            if(empty($file['type']) || !in_array($file['type'], $upload::isAllowed())){
+                flashMessages("success", "Selecione uma imagem valida");
+                redirect(url('partners'));
+            }else{
+                $uploaded = $upload->upload($file, pathinfo($file['name'], PATHINFO_FILENAME), 1920);
+            }
+        }
+
+        if(!empty($uploaded)){
+            $request['logo'] = $uploaded;
+        }else{
+            $request['logo'] = $request['img_antiga'];
+        }
+
+        if(!empty($request['senha'])){
+            $request['senha'] = crypt($request['senha'], '');
+        }
+
+        //dd($request);
+
+        if(!empty($request['tipo'])){
             $new_doctor = $this->model->save($request);
         }
 
         if(!empty($new_doctor)){
-            flashMessages("success", "glossário cadastrado com sucesso");
+            flashMessages("success", "Medico cadastrado com sucesso");
             redirect(url('doctors'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao cadastrar o glossário, favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao cadastrar o medico, favor contactar o suporte');
             redirect(url('doctors'));
         }
 
@@ -84,7 +112,7 @@ class DoctorsController extends ValidateLoginController
 
         echo $this->view->render('edit', [
             'title' => 'Editar Médico | '. SITE,
-            'glossary' => $doctor
+            'doctor' => $doctor
         ]);
     }
 
@@ -97,10 +125,10 @@ class DoctorsController extends ValidateLoginController
         }
 
         if(!empty($delete_doctor)){
-            flashMessages("success", "glossário  deletado com sucesso");
+            flashMessages("success", "medico  deletado com sucesso");
             redirect(url('doctors'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao deletar o glossário , favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao deletar o medico , favor contactar o suporte');
             redirect(url('doctors'));
         }
     }
@@ -108,16 +136,50 @@ class DoctorsController extends ValidateLoginController
     public function update(array $request)
     {
         $update_doctor = '';
+        $files = $_FILES;
+        $uploaded = '';
+        $valida_identificacao = '';
+        $msg_error = "Ocorreu um problema ao editar o medico , favor contactar o suporte";
+        $upload = new Image("../assets/img", 'uploads');
 
-        if(!empty($request['description']) || isset($request['name']) && isset($request['id'])){
-            $update_doctor = $this->model->update($request);
+        if(!empty($files['imagem']['name'])){
+            $file = $files['imagem'];
+
+            if(empty($file['type']) || !in_array($file['type'], $upload::isAllowed())){
+                flashMessages("success", "Selecione uma imagem valida");
+                redirect(url('partners'));
+            }else{
+                $uploaded = $upload->upload($file, pathinfo($file['name'], PATHINFO_FILENAME), 1920);
+            }
+        }
+
+        if(!empty($uploaded)){
+            $request['logo'] = $uploaded;
+        }else{
+            $request['logo'] = $request['img_antiga'];
+        }
+
+        if(isset($request['identificacao']) && !empty($request['identificacao'])){
+            $valida_identificacao = apiConsultaMédicos($request['UF'], $request['identificacao'], $request['tipo_identificacao']);
+        }
+
+        if(!empty($request['tipo'])){
+            if($request['tipo'] == 1 || $request['tipo'] == 3){
+                if(!empty($valida_identificacao['item'])){
+                    $update_doctor = $this->model->update($request);
+                }else{
+                    $msg_error = $request['tipo_identificacao']." não encontrada, tente novamente mais tarde!";
+                }
+            }else{
+                $update_doctor = $this->model->update($request);
+            }
         }
 
         if(!empty($update_doctor)){
-            flashMessages("success", "glossário  editada com sucesso");
+            flashMessages("success", "medico  editado com sucesso");
             redirect(url('doctors'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao editar o glossário , favor contactar o suporte');
+            flashMessages("error", $msg_error);
             redirect(url('doctors'));
         }
 

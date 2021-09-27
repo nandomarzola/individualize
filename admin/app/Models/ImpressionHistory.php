@@ -40,11 +40,14 @@ class ImpressionHistory extends Model
 
     public function countRegisters(string $search) {
 
-        if(!empty($search)){
-            $search = ' where '.$search;
-        }
 
-        $query = "select count(*) as count from $this->db  $search";
+        $query = "select count(*) as count from $this->db as impressoes
+                   LEFT JOIN $this->db_medicos as medicos ON medicos.id = impressoes.id_medico
+                   LEFT JOIN $this->db_formulas as formulas ON formulas.id = impressoes.id_formula
+                   where
+                   medicos.nome is not null and 
+                   formulas.nome is not null
+                   $search";
 
         return $this->query($query)->fetchAll();
 

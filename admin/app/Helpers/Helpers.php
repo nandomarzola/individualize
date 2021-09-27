@@ -65,6 +65,17 @@ function convertDateString(string $date){
 
 }
 
+function apiConsultaMédicos($state, $serial, $tipo){
+
+    $url = "https://www.consultacrm.com.br/api/index.php?tipo=$tipo&uf=$state&q=$serial&chave=1131329113&destino=json";
+    $curl = curl_init($url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, True);
+    $return = curl_exec($curl);
+    curl_close($curl);
+
+    return json_decode($return, true);
+}
+
 
 
 

@@ -68,10 +68,10 @@ class GlossaryController extends ValidateLoginController
         }
 
         if(!empty($new_glossary)){
-            flashMessages("success", "glossário cadastrado com sucesso");
+            flashMessages("success", "glossario cadastrado com sucesso");
             redirect(url('glossary'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao cadastrar o glossário, favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao cadastrar o glossario, favor contactar o suporte');
             redirect(url('glossary'));
         }
 
@@ -96,10 +96,10 @@ class GlossaryController extends ValidateLoginController
         }
 
         if(!empty($delete_glossary)){
-            flashMessages("success", "glossário  deletado com sucesso");
+            flashMessages("success", "glossario  deletado com sucesso");
             redirect(url('glossary'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao deletar o glossário , favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao deletar o glossario , favor contactar o suporte');
             redirect(url('glossary'));
         }
     }
@@ -113,10 +113,10 @@ class GlossaryController extends ValidateLoginController
         }
 
         if(!empty($update_glossary)){
-            flashMessages("success", "glossário  editada com sucesso");
+            flashMessages("success", "glossario  editada com sucesso");
             redirect(url('glossary'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao editar o glossário , favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao editar o glossario , favor contactar o suporte');
             redirect(url('glossary'));
         }
 

@@ -32,6 +32,7 @@
                         <thead>
                         <tr>
                             <th>Id</th>
+                            <th>Nome</th>
                             <th>Imagem</th>
                             <th style="text-align: center">Editar</th>
                             <th style="text-align: center">Deletar</th>
@@ -41,6 +42,7 @@
                         <?php foreach ($data as $key => $d): ?>
                             <tr>
                                 <td><?= $d['id']?></td>
+                                <td><?= $d['nome']?></td>
                                 <td><img src="<?= '/../../admin/'.$d['imagem']?>" alt="logo parceiro" style="width: 300px; max-height: 150px" /></td>
                                 <td style="text-align: center;">
                                     <a href="<?= url('partners/'.$d['id'].'/edit')?>" class="btn btn-info btn-sm" title="Editar" style="width: 40px;"><i class="fa fa-edit"></i></a>

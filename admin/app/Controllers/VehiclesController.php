@@ -102,10 +102,10 @@ class VehiclesController extends ValidateLoginController
         }
 
         if(!empty($new_vehicle)){
-            flashMessages("success", "Veículo cadastrado com sucesso");
+            flashMessages("success", "Veiculo cadastrado com sucesso");
             redirect(url('vehicles'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao cadastrar o Veículo, favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao cadastrar o Veiculo, favor contactar o suporte');
             redirect(url('vehicles'));
         }
 
@@ -137,10 +137,10 @@ class VehiclesController extends ValidateLoginController
         }
 
         if(!empty($delete_vehicle)){
-            flashMessages("success", "Veículo deletado com sucesso");
+            flashMessages("success", "Veiculo deletado com sucesso");
             redirect(url('vehicles'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao deletar o Veículo , favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao deletar o Veiculo , favor contactar o suporte');
             redirect(url('vehicles'));
         }
     }
@@ -162,10 +162,10 @@ class VehiclesController extends ValidateLoginController
         }
 
         if(!empty($update_vehicle)){
-            flashMessages("success", "Veículo editado com sucesso");
+            flashMessages("success", "Veiculo editado com sucesso");
             redirect(url('vehicles'));
         }else{
-            flashMessages("error", 'Ocorreu um problema ao editar o Veículo , favor contactar o suporte');
+            flashMessages("error", 'Ocorreu um problema ao editar o Veiculo , favor contactar o suporte');
             redirect(url('vehicles'));
         }
 
