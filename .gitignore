@@ -10,4 +10,6 @@
 /includes/configuracoes.inc.php
 /includes/seguranca.php
 .htaccess
+/admin/app/Models/Model.php
 /admin/config
+/admin/app/Helpers
