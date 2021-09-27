@@ -5,9 +5,9 @@ namespace App\Models;
 class Model
 {
     private $host = "localhost";
-    private $usuario = "root";
-    private $senha = "root";
-    private $db = "indivi14_i9";
+    private $usuario = "indivi14_i9";
+    private $senha = "banco102030";
+    private $db = "indivi14_hmkt";
     private $conn;
 
     public function __construct() {
